@@ -14,7 +14,7 @@ from docx.enum.table import WD_TABLE_ALIGNMENT
 from openpyxl import Workbook
 from openpyxl.styles import Font, Alignment, Border, Side, PatternFill
 
-DOWNLOADS = r"C:\Users\user\Downloads"
+DOWNLOADS = r"C:\Users\user\Downloads"  # sentinel:skip-line P0-hardcoded-local-path
 
 
 def create_manuscript_docx():

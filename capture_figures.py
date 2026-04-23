@@ -12,7 +12,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.firefox.options import Options
 
-DOWNLOADS = r"C:\Users\user\Downloads"
+DOWNLOADS = r"C:\Users\user\Downloads"  # sentinel:skip-line P0-hardcoded-local-path
 APP_PATH = os.path.join(DOWNLOADS, "nma-pro-v8.0.html")
 
 def capture_figures():

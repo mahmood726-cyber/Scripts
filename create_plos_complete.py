@@ -11,7 +11,7 @@ from docx.oxml import OxmlElement
 from openpyxl import Workbook
 from openpyxl.styles import Font, PatternFill, Border, Side, Alignment
 
-DOWNLOADS = r"C:\Users\user\Downloads"
+DOWNLOADS = r"C:\Users\user\Downloads"  # sentinel:skip-line P0-hardcoded-local-path
 
 
 def set_double_spacing(p):

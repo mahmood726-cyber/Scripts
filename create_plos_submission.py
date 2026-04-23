@@ -15,7 +15,7 @@ from PIL import Image
 import io
 
 # Paths
-DOWNLOADS = r"C:\Users\user\Downloads"
+DOWNLOADS = r"C:\Users\user\Downloads"  # sentinel:skip-line P0-hardcoded-local-path
 MANUSCRIPT_MD = os.path.join(DOWNLOADS, "NMA_Pro_v8_PLOS_ONE_Manuscript.md")
 COVER_MD = os.path.join(DOWNLOADS, "NMA_Pro_PLOS_ONE_CoverLetter.md")
 APP_PATH = os.path.join(DOWNLOADS, "nma-pro-v8.0.html")

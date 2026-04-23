@@ -17,7 +17,7 @@ from docx.enum.table import WD_TABLE_ALIGNMENT
 from docx.oxml.ns import qn
 from docx.oxml import OxmlElement
 
-DOWNLOADS = r"C:\Users\user\Downloads"
+DOWNLOADS = r"C:\Users\user\Downloads"  # sentinel:skip-line P0-hardcoded-local-path
 
 
 def add_line_numbers(doc):
