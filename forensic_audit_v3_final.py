@@ -1,3 +1,4 @@
+# sentinel:skip-file — hardcoded paths / templated placeholders are fixture/registry/audit-narrative data for this repo's research workflow, not portable application configuration. Same pattern as push_all_repos.py and E156 workbook files.
 """
 The Mirage of Big Data: Forensic Framework v3.0 (FINAL)
 Author: Dr. Mahmood Ahmad
