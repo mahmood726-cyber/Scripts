@@ -97,13 +97,12 @@ class ImprovedRCTExtractor:
         r"[^\d\-\+]+"  # skip to numbers
         rf"(?P<effect>{NUM})"  # effect estimate
         r"\s*\(\s*"  # open CI bracket
-        r"(?:95\s*%\s*)?(?:confidence\s+interval\s*)?(?P<open>[\(\[])?"  # optional prefix
+        r"(?:95\s*%\s*)?(?:CI\s*)?(?:confidence\s+interval\s*)?[\(\[:]?\s*"  # optional "95% CI" prefix / inner bracket
         rf"(?P<ci_lo>{NUM})"  # lower CI bound
-        r"\s*[-–—]\s*"  # dash between CI bounds
+        r"\s*(?:to|[-–—,])\s*"  # separator between CI bounds
         rf"(?P<ci_hi>{NUM})"  # upper CI bound
-        r"\s*([\)\]])"  # closing bracket
-        r"\)"  # closing parentheses
-        r"\s*(;\s*P\s*[<=>]\s*(?P<pval>{NUM}))?",  # optional P value
+        rf"\s*(?:;?\s*P\s*[<=>]\s*(?P<pval>{NUM}))?"  # optional P value (may sit inside the CI parens)
+        r"\s*[\)\]]",  # closing bracket of the CI group
         re.I,
     )
 
